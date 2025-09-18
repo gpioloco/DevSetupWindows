@@ -1,0 +1,19 @@
+Language: Cpp
+BasedOnStyle: LLVM
+AlignOperands: false
+AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: Inline
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Allman
+BreakConstructorInitializersBeforeComma: true
+ColumnLimit: 120
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+IndentCaseLabels: true
+PenaltyReturnTypeOnItsOwnLine: 140 #ANWI: if lower than ColumnLimit it will break the function declaration (in header) after the return type
+PointerAlignment: Left
+SortIncludes: false
+TabWidth: 2
