@@ -4,3 +4,4 @@
 
 vim.g.lazyvim_picker = "telescope"
 vim.opt.clipboard = "unnamedplus"
+vim.g.autoformat = false
