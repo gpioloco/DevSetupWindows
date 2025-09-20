@@ -51,8 +51,11 @@ require("lazy").setup({
     },
   },
 })
+
+-- Set background color to transparent
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")
-
--- vim.cmd("highlight Normal ctermbg=0 guibg=#000000")
--- vim.cmd("highlight NonText ctermbg=0 guibg=#000000")
+vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+vim.api.nvim_set_hl(0, "SnacksExplorerNormal", { bg = "NONE" })
