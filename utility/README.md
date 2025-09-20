@@ -11,3 +11,13 @@ winget install chocolatey
 ```console
 choco install ripgrep
 ```
+```console
+
+
+## clang
+
+```console
+
+choco install llvm
+```
+```
