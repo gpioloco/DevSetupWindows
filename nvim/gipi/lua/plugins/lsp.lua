@@ -3,6 +3,7 @@ return {
   opts = {
     autoformat = false,
     servers = {
+      rust_analyzer = {},
       clangd = {
         keys = {
           { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
