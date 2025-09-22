@@ -27,7 +27,7 @@ return {
       desc = "Toggle Breakpoint",
     },
     {
-      "<leader>dc",
+      "<f5>",
       function()
         require("dap").continue()
       end,
@@ -55,7 +55,7 @@ return {
       desc = "Go to Line (No Execute)",
     },
     {
-      "<leader>di",
+      "<f11>",
       function()
         require("dap").step_into()
       end,
@@ -83,14 +83,14 @@ return {
       desc = "Run Last",
     },
     {
-      "<leader>do",
+      "<S-F11>",
       function()
         require("dap").step_out()
       end,
       desc = "Step Out",
     },
     {
-      "<leader>dO",
+      "<f10>",
       function()
         require("dap").step_over()
       end,
