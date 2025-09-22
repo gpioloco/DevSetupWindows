@@ -17,3 +17,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.opt.shiftwidth = 2    -- Number of spaces for each indentation level
+vim.opt.tabstop = 2       -- Number of spaces a tab character represents
+vim.opt.expandtab = true  -- Use spaces instead of tabs

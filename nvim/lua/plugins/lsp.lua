@@ -3,7 +3,18 @@ return {
   opts = {
     autoformat = false,
     servers = {
-      rust_analyzer = {},
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              command = "clippy",
+            },
+            inlayHints = {
+              enable = false, -- disable if you want external plugin
+            },
+          },
+        },
+      },
       clangd = {
         keys = {
           { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
