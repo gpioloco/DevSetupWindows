@@ -178,5 +178,32 @@ return {
         stopOnEntry = false,
       },
     }
+
+    dap.adapters.python = {
+      type = 'executable';
+      command = 'python'; -- or 'python3'
+      args = { '-m', 'debugpy.adapter' };
+    }
+
+    dap.configurations.python = {
+      {
+        -- The first three options are required by nvim-dap
+        type = 'python'; -- the adapter to use
+        request = 'launch';
+        name = "Launch file";
+
+        -- Options below are for debugpy
+        program = "${file}"; -- This will debug the current file
+        pythonPath = function()
+          -- Use activated virtualenv or fallback to system python
+          local venv_path = os.getenv('VIRTUAL_ENV')
+          if venv_path then
+            return venv_path .. '/bin/python'
+          else
+            return 'python'
+          end
+        end;
+      },
+    }
   end,
 }
