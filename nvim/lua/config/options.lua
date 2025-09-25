@@ -21,3 +21,4 @@ vim.opt.shiftwidth = 2    -- Number of spaces for each indentation level
 vim.opt.tabstop = 2       -- Number of spaces a tab character represents
 vim.opt.expandtab = true  -- Use spaces instead of tabs
 
+vim.opt.scrolloff = 25
