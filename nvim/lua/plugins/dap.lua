@@ -185,6 +185,12 @@ return {
       args = { '-m', 'debugpy.adapter' };
     }
 
+    dap.adapters.debugpy = {
+      type = 'executable';
+      command = 'python';
+      args = { '-m', 'debugpy.adapter' };
+    }
+
     dap.configurations.python = {
       {
         -- The first three options are required by nvim-dap
