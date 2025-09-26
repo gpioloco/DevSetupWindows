@@ -1,0 +1,155 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+:root {
+  --base: 0 0% 5%;
+  --surface: 0 0% 10%;
+  --overlay: 0 0% 15%;
+  --muted: 0 0% 50%;
+  --subtle: 0 0% 65%;
+  --text: 0 0% 90%;
+  --love: 0 100% 50%;
+  --gold: 0 100% 70%;
+  --rose: 0 100% 70%;
+  --pine: 0 0% 30%;
+  --foam: 0 0% 75%;
+  --iris: 0 0% 80%;
+  --highlight-low: 0 0% 12%;
+  --highlight-med: 0 0% 25%;
+  --highlight-high: 0 0% 40%;
+}
+
+i {
+  color: hsl(var(--subtle) / 70%);
+  margin-right: 7px;
+}
+
+body {
+  color: hsl(var(--text) / 85%);
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  border-bottom: 2px solid hsl(var(--text) / 50%);
+  border-left: 2px solid hsl(var(--text) / 70%);
+  border-right: 2px solid hsl(var(--text) / 70%);
+  border-radius: 4px;
+  background: linear-gradient(
+    hsl(var(--base) / 20%),
+    hsl(var(--overlay) / 25%)
+  );
+  width: calc(100% - 30px);
+  margin: 0 auto;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 4px 1.5vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 20px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--highlight-low) / 10%);
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: hsl(var(--text) / 85%);
+  border: 1px solid hsl(var(--text) / 30%);
+  border-radius: 2px;
+  cursor: pointer;
+  height: 24px;
+  line-height: 1;
+}
+
+.workspace.displayed {
+  background: hsl(var(--highlight-med) / 15%);
+}
+
+.workspace.focused,
+.workspace:hover {
+  background: hsl(var(--iris) / 35%);
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--highlight-med) / 15%);
+  color: hsl(var(--text) / 85%);
+  border-radius: 2px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 1px solid hsl(var(--text) / 50%);
+  cursor: pointer;
+  height: 24px;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: hsl(var(--love) / 80%);
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
