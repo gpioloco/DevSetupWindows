@@ -20,6 +20,9 @@ return { "mrcjkb/rustaceanvim",
               enable = true,
             },
           },
+          inlayHints = {
+            enable = false,
+          },
           -- Add clippy lints for Rust
           checkOnSave = {
             command = "clippy",
