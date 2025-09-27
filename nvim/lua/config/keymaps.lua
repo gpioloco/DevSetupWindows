@@ -17,6 +17,7 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 
 vim.keymap.set("n", "<leader>gs", require("telescope.builtin").grep_string, { desc = "Grep string under cursor" })
 vim.keymap.set("n", "<leader>fs", require("telescope.builtin").git_files, { desc = "Search git files" })
+vim.keymap.set("n", "<leader><space>", require("telescope.builtin").find_files, { desc = "Find Files telescope" })
 vim.keymap.set("n", "<leader>cb", function()
   vim.cmd("w")
   vim.cmd("split | terminal cargo build")
