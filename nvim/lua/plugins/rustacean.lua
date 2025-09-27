@@ -1,5 +1,4 @@
-return {
-  "mrcjkb/rustaceanvim",
+return { "mrcjkb/rustaceanvim",
   ft = { "rust" },
   opts = {
     server = {
@@ -21,11 +20,13 @@ return {
               enable = true,
             },
           },
-          -- Add clippy lints for Rust if using rust-analyzer
-          checkOnSave = diagnostics == "rust-analyzer",
-          -- Enable diagnostics if using rust-analyzer
+          -- Add clippy lints for Rust
+          checkOnSave = {
+            command = "clippy",
+          },
+          -- Enable diagnostics
           diagnostics = {
-            enable = diagnostics == "rust-analyzer",
+            enable = true,
           },
           procMacro = {
             enable = true,
