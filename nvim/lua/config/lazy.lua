@@ -62,3 +62,19 @@ vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "SnacksExplorerNormal", { bg = "NONE" })
+
+local groups = {
+  "Normal", "NormalFloat", "FloatBorder", "Visual", "CursorLine",
+  "StatusLine", "LineNr", "SignColumn", "Pmenu", "PmenuSel",
+  "PmenuSbar", "PmenuThumb", "VertSplit", "Search", "IncSearch",
+  "WildMenu", "TabLine", "TabLineFill", "TabLineSel", "Title",
+  "Directory", "Comment", "Constant", "Identifier", "Statement",
+  "PreProc", "Type", "Special", "Underlined", "Error", "Todo",
+}
+
+for _, group in ipairs(groups) do
+  vim.api.nvim_set_hl(0, group, { bg = "none" })
+end
+
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#2a2a2a" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#eeeeee", bg = "#3a3a3a" })
